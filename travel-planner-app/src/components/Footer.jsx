@@ -1,11 +1,7 @@
-import React from "react";
-
-function Footer() {
+export default function Footer() {
   return (
-    <div className="text-xl flex items-center justify-center">
-      &copy; Travel Tour 2025
-    </div>
+    <footer className="mt-12 py-6 text-center text-gray-500">
+      © 2025 Travel Planner · All rights reserved
+    </footer>
   );
 }
-
-export default Footer;

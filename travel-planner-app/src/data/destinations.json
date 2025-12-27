@@ -1,0 +1,20 @@
+[
+  {
+    "id": "paris",
+    "city": "Paris",
+    "country": "France",
+    "image": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34",
+    "temperature": "18°C",
+    "description": "The city of love and lights.",
+    "attractions": ["Eiffel Tower", "Louvre Museum", "Notre Dame"]
+  },
+  {
+    "id": "london",
+    "city": "London",
+    "country": "UK",
+    "image": "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
+    "temperature": "15°C",
+    "description": "Historic city with modern charm.",
+    "attractions": ["Big Ben", "London Eye", "Buckingham Palace"]
+  }
+]

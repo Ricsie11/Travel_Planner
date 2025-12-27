@@ -19,7 +19,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="sticky top-0 w-full bg-white shadow-md px-6 py-4">
+    <nav className="sticky top-0 w-full bg-white shadow-lg px-6 py-4">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link
           to="/"
@@ -32,8 +32,8 @@ export default function Navbar() {
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8">
           <NavLink to="/" label="Home" />
-          <NavLink to="/Destination" label="Destination" />
-          <NavLink to="/Itinerary" label="Itinerary" />
+          <NavLink to="/destinations" label="Destination" />
+          <NavLink to="/itinerary" label="Itinerary" />
         </div>
 
         {/* Hamburger Button */}
