@@ -12,9 +12,107 @@
     "id": "london",
     "city": "London",
     "country": "UK",
-    "image": "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
+    "image": "https://res.cloudinary.com/aenetworks/image/upload/c_fill,ar_2,w_3840,h_1920,g_auto/dpr_auto/f_auto/q_auto:eco/v1/topic-london-gettyimages-760251843-feature?_a=BAVAZGID0",
     "temperature": "15°C",
     "description": "Historic city with modern charm.",
     "attractions": ["Big Ben", "London Eye", "Buckingham Palace"]
+  },
+  {
+    "id": "new-york",
+    "city": "New York",
+    "country": "USA",
+    "image": "https://nyc.eu/wp-content/uploads/2015/07/New_York_City-scaled.jpg",
+    "temperature": "22°C",
+    "description": "The city that never sleeps.",
+    "attractions": ["Statue of Liberty", "Central Park", "Times Square"]
+  },
+  {
+    "id": "tokyo",
+    "city": "Tokyo",
+    "country": "Japan",
+    "image": "https://media.istockphoto.com/id/1188118008/photo/a-night-of-the-neon-street-at-the-downtown-in-shinjuku-tokyo-wide-shot.jpg?s=612x612&w=0&k=20&c=zE2AzmisWd4tRTnqdOxLUcP5SVZSrdkbc8lKOhJ5FvY=",
+    "temperature": "20°C",
+    "description": "Blend of tradition and futuristic vibes.",
+    "attractions": ["Shibuya Crossing", "Meiji Shrine", "Tokyo Tower"]
+  },
+  {
+    "id": "sydney",
+    "city": "Sydney",
+    "country": "Australia",
+    "image": "https://media.istockphoto.com/id/1256052948/photo/sydney-opera-house-close-up.jpg?s=612x612&w=0&k=20&c=whIj_OHD1xUfx9rgcLaKC2V_AjOJZb24IQOCcKrxaCM=",
+    "temperature": "25°C",
+    "description": "Famous for its stunning harbor and Opera House.",
+    "attractions": ["Sydney Opera House", "Bondi Beach", "Harbour Bridge"]
+  },
+  {
+    "id": "rome",
+    "city": "Rome",
+    "country": "Italy",
+    "image": "https://media.istockphoto.com/id/537714748/photo/navona-square-rome-italy.jpg?s=612x612&w=0&k=20&c=UVGkQA3R-OZsnDoF-KfxFJlzbBBPEiXLX3U6QrOwF4c=",
+    "temperature": "19°C",
+    "description": "Ancient city full of history and art.",
+    "attractions": ["Colosseum", "Vatican City", "Trevi Fountain"]
+  },
+  {
+    "id": "dubai",
+    "city": "Dubai",
+    "country": "UAE",
+    "image": "https://momentaryawe.com/wp-content/uploads/2012/05/beautiful_dubai_4.jpg",
+    "temperature": "30°C",
+    "description": "Modern city with luxury and skyscrapers.",
+    "attractions": ["Burj Khalifa", "Dubai Mall", "Palm Jumeirah"]
+  },
+  {
+    "id": "cape-town",
+    "city": "Cape Town",
+    "country": "South Africa",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Cape_Town_City_%28cropped%29.jpg",
+    "temperature": "21°C",
+    "description": "Coastal city with breathtaking landscapes.",
+    "attractions": ["Table Mountain", "Robben Island", "V&A Waterfront"]
+  },
+  {
+    "id": "abuja",
+    "city": "Abuja",
+    "country": "Nigeria",
+    "image": "https://t3.ftcdn.net/jpg/03/59/31/68/360_F_359316888_QL4VKw3ZLdZWeHGZaajVrt6jbWQG5NsM.jpg",
+    "temperature": "28°C",
+    "description": "Nigeria’s capital city with modern architecture and greenery.",
+    "attractions": ["Aso Rock", "Millennium Park", "National Mosque"]
+  },
+  {
+    "id": "lagos",
+    "city": "Lagos",
+    "country": "Nigeria",
+    "image": "https://images.unsplash.com/photo-1707008797390-38f13ea40163?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGxhZ29zJTIwbmlnZXJpYXxlbnwwfHwwfHx8MA%3D%3D",
+    "temperature": "32°C",
+    "description": "Bustling coastal city known for culture, nightlife, and beaches.",
+    "attractions": [
+      "Lekki Conservation Centre",
+      "Nike Art Gallery",
+      "Tarkwa Bay Beach"
+    ]
+  },
+  {
+    "id": "marrakech",
+    "city": "Marrakech",
+    "country": "Morocco",
+    "image": "https://www.muchbetteradventures.com/magazine/content/images/size/w2000/2023/01/marrakech.jpg",
+    "temperature": "27°C",
+    "description": "Vibrant city famous for markets, gardens, and culture.",
+    "attractions": ["Jemaa el-Fnaa", "Majorelle Garden", "Koutoubia Mosque"]
+  },
+  {
+    "id": "cairo",
+    "city": "Cairo",
+    "country": "Egypt",
+    "image": "https://images.adsttc.com/media/images/64a2/cdae/cb9c/464f/a63a/9764/newsletter/cairo-architecture-city-guide-exploring-the-unique-architectural-blend-of-historical-and-contemporary-in-egypts-bustling-capital_23.jpg?1688391095",
+    "temperature": "29°C",
+    "description": "Historic city near the Great Pyramids.",
+    "attractions": [
+      "Pyramids of Giza",
+      "Egyptian Museum",
+      "Khan el-Khalili Bazaar"
+    ]
   }
 ]

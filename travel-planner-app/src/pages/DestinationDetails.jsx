@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import data from "../data/destinations.json";
+import { addToItinerary } from "../utils/itinerary";
 
 function DestinationDetails() {
   const { id } = useParams();
@@ -14,23 +15,19 @@ function DestinationDetails() {
         className="w-full h-80 object-cover rounded-lg"
       />
 
-      <h1 className="text-3xl font-bold mt-4">
-        {destination.city}
-      </h1>
+      <h1 className="text-3xl font-bold mt-4">{destination.city}</h1>
 
       <div className="mt-6">
-        <h2 className="text-xl font-semibold mb-2">
-          Attractions
-        </h2>
+        <h2 className="text-xl font-semibold mb-2">Attractions</h2>
 
-        <div className="grid md:grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-3 gap-6">
           {destination.attractions.map((item) => (
-            <div
-              key={item}
-              className="p-4 border rounded shadow-sm"
-            >
+            <div key={item} className="p-4 border rounded shadow-sm">
               <h3 className="font-medium">{item}</h3>
-              <button className="mt-2 text-blue-500">
+              <button
+                onClick={() => addToItinerary(item)}
+                className="mt-2 text-sm text-blue-500 hover:underline"
+              >
                 Add to Itinerary
               </button>
             </div>

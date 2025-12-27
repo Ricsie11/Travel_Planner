@@ -1,110 +1,136 @@
-import { Link } from "react-router-dom";
-import { useState, useRef, useEffect } from "react";
 import logo from "../assets/logo.png";
+import logo2 from "../assets/logo2.png";
+import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const menuRef = useRef(null);
+  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
 
-  // Close menu when clicking outside
+  // load theme once
   useEffect(() => {
-    function handleClickOutside(e) {
-      if (menuRef.current && !menuRef.current.contains(e.target)) {
-        setIsOpen(false);
-      }
-    }
+    const saved = localStorage.getItem("theme");
+    const isDark = saved === "dark";
+    setDarkMode(isDark);
+    document.documentElement.classList.toggle("dark", isDark);
+  }, []);
 
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+  // apply theme when toggled
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", darkMode);
+    localStorage.setItem("theme", darkMode ? "dark" : "light");
+  }, [darkMode]);
+
+  // sticky effect
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <nav className="sticky top-0 w-full bg-white shadow-lg px-6 py-4">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <Link
-          to="/"
-          className="text-xl font-bold text-blue-600 flex items-center"
-        >
-          <img src={logo} alt="logo" className="h-15 w-15 mr-2" />
-          Travel Tour
+    <nav
+      className={[
+        "fixed top-0 w-full z-50 transition-all duration-300",
+        "border-b border-gray-200 dark:border-gray-700",
+        scrolled
+          ? "bg-white/90 dark:bg-gray-900/90 backdrop-blur shadow"
+          : "bg-white dark:bg-gray-900",
+      ].join(" ")}
+    >
+      <div className="px-6 py-4 max-w-7xl mx-auto flex justify-between items-center">
+        <Link to="/" className="flex items-center gap-2">
+          <img
+            src={darkMode ? logo : logo2}
+            alt="Travel Planner logo"
+            className="h-10 w-10 object-contain transition-opacity duration-300"
+          />
+          <span
+            className="text-xl  font-semibold text-blue-500 tracking-wide"
+            style={{ fontFamily: "Poppins, sans-serif" }}
+          >
+            Atlas
+          </span>
+
+          <span className="text-xs text-gray-500 dark:text-gray-400">
+            Your world, planned
+          </span>
         </Link>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-8">
-          <NavLink to="/" label="Home" />
-          <NavLink to="/destinations" label="Destination" />
-          <NavLink to="/itinerary" label="Itinerary" />
-        </div>
+        <div className="flex items-center gap-4">
+          <button
+            onClick={() => setDarkMode((v) => !v)}
+            className="text-xl"
+            aria-label="Toggle dark mode"
+            type="button"
+          >
+            {darkMode ? "☀️" : "🌙"}
+          </button>
 
-        {/* Hamburger Button */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden flex flex-col justify-between w-8 h-6 focus:outline-none"
-        >
-          <span
-            className={`h-1 w-full bg-black rounded transition-all duration-300 ${
-              isOpen ? "rotate-45 translate-y-2.5" : ""
-            }`}
-          />
-          <span
-            className={`h-1 w-full bg-black rounded transition-all duration-300 ${
-              isOpen ? "opacity-0" : ""
-            }`}
-          />
-          <span
-            className={`h-1 w-full bg-black rounded transition-all duration-300 ${
-              isOpen ? "-rotate-45 -translate-y-2.5" : ""
-            }`}
-          />
-        </button>
+          <button
+            onClick={() => setOpen((v) => !v)}
+            className="md:hidden relative w-8 h-6"
+            aria-label="Toggle menu"
+            type="button"
+          >
+            <span
+              className={`absolute h-0.5 w-full bg-black dark:bg-white transition-all ${
+                open ? "rotate-45 top-3" : "top-0"
+              }`}
+            />
+            <span
+              className={`absolute h-0.5 w-full bg-black dark:bg-white transition-all top-3 ${
+                open ? "opacity-0" : "opacity-100"
+              }`}
+            />
+            <span
+              className={`absolute h-0.5 w-full bg-black dark:bg-white transition-all ${
+                open ? "-rotate-45 top-3" : "top-6"
+              }`}
+            />
+          </button>
+
+          <div className="hidden md:flex space-x-6 font-medium text-gray-900 dark:text-white">
+            <Link to="/" className="hover:text-blue-500">
+              Home
+            </Link>
+            <Link to="/destinations" className="hover:text-blue-500">
+              Destinations
+            </Link>
+            <Link to="/itinerary" className="hover:text-blue-500">
+              Itinerary
+            </Link>
+          </div>
+        </div>
       </div>
 
-      {/* Mobile Menu */}
       <div
-        ref={menuRef}
-        className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${
-          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={`md:hidden overflow-hidden transition-all duration-300 ${
+          open ? "max-h-40 px-6 pb-4" : "max-h-0"
+        } bg-white dark:bg-gray-900 text-gray-900 dark:text-white`}
       >
-        <div className="flex flex-col mt-4 space-y-4 px-4 pb-4">
-          <MobileNavLink to="/" label="Home" setIsOpen={setIsOpen} />
-          <MobileNavLink
-            to="/Destination"
-            label="Destination"
-            setIsOpen={setIsOpen}
-          />
-          <MobileNavLink
-            to="/Itinerary"
-            label="Itinerary"
-            setIsOpen={setIsOpen}
-          />
+        <div className="space-y-3 font-medium">
+          <Link to="/" onClick={() => setOpen(false)} className="block">
+            Home
+          </Link>
+          <Link
+            to="/destinations"
+            onClick={() => setOpen(false)}
+            className="block"
+          >
+            Destinations
+          </Link>
+          <Link
+            to="/itinerary"
+            onClick={() => setOpen(false)}
+            className="block"
+          >
+            Itinerary
+          </Link>
         </div>
       </div>
     </nav>
   );
-
-  /* ---------- Reusable Components ---------- */
-
-  function NavLink({ to, label }) {
-    return (
-      <Link
-        to={to}
-        className="text-black font-medium text-xl hover:text-blue-600 transition"
-      >
-        {label}
-      </Link>
-    );
-  }
-
-  function MobileNavLink({ to, label, setIsOpen }) {
-    return (
-      <Link
-        to={to}
-        onClick={() => setIsOpen(false)}
-        className="text-black font-medium text-lg hover:text-blue-600 transition"
-      >
-        {label}
-      </Link>
-    );
-  }
 }

@@ -2,19 +2,17 @@ import { Link } from "react-router-dom";
 
 export default function DestinationCard({ destination }) {
   return (
-    <div className="rounded shadow hover:shadow-lg bg-white">
+    <div className="rounded shadow bg-white dark:text-black transform transition duration-300 hover:scale-105 hover:shadow-lg">
       <img
         src={destination.image}
         className="h-48 w-full object-cover rounded-t"
       />
       <div className="p-4">
         <h3 className="font-bold">{destination.city}</h3>
-        <p className="text-gray-600 text-sm">
+        <p className="text-gray-600 text-sm ">
           {destination.country} · {destination.temperature}
         </p>
-        <p className="text-sm mt-2">
-          {destination.description}
-        </p>
+        <p className="text-sm mt-2">{destination.description}</p>
 
         <Link
           to={`/destinations/${destination.id}`}
