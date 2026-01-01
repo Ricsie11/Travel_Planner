@@ -6,6 +6,7 @@ import Destinations from "./pages/Destinations";
 import DestinationDetails from "./pages/DestinationDetails";
 import Itinerary from "./pages/Itinerary";
 import FloatingWhatsapp from "./components/FloatingWhatsapp";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function App() {
   return (
@@ -20,7 +21,7 @@ export default function App() {
             <Route path="/itinerary" element={<Itinerary />} />
           </Routes>
         </main>
-
+        <SpeedInsights />
         <Footer />
       </div>
       <FloatingWhatsapp />
