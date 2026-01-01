@@ -6,7 +6,7 @@ import Destinations from "./pages/Destinations";
 import DestinationDetails from "./pages/DestinationDetails";
 import Itinerary from "./pages/Itinerary";
 import FloatingWhatsapp from "./components/FloatingWhatsapp";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 export default function App() {
   return (
