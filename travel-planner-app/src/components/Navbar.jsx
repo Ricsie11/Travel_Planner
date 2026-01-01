@@ -16,13 +16,13 @@ export default function Navbar() {
     document.documentElement.classList.toggle("dark", isDark);
   }, []);
 
-  // apply theme when toggled
+  // apply dark theme when toggled
   useEffect(() => {
     document.documentElement.classList.toggle("dark", darkMode);
     localStorage.setItem("theme", darkMode ? "dark" : "light");
   }, [darkMode]);
 
-  // sticky effect
+  // Navbar sticky effect
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);

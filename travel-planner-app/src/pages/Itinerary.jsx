@@ -14,7 +14,7 @@ export default function Itinerary() {
   }
 
   return (
-    <div className="mt-10 grid md:grid-cols-2 gap-6">
+    <div className="mt-10 mb-20 grid md:grid-cols-2 gap-6 m-4">
       <div>
         <h2 className="text-2xl font-bold mb-4">Your Itinerary</h2>
 
@@ -40,7 +40,7 @@ export default function Itinerary() {
         </ul>
       </div>
 
-      <div className="border rounded p-4 shadow">
+      <div className="border rounded p-4 m-4 shadow">
         <h3 className="font-semibold mb-2">Trip Summary</h3>
         <p>{items.length} Activities planned </p>
 

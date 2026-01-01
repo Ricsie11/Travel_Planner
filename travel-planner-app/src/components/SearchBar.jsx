@@ -3,9 +3,8 @@ export default function SearchBar({ onSearch }) {
     <input
       type="text"
       placeholder="Search destinations..."
-      onChange={(e) => onSearch?.(e.target.value)}
-      className="border p-3 rounded w-full max-w-md"
+      className="border p-3 rounded w-full max-w-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+      onChange={(e) => onSearch(e.target.value)}
     />
   );
 }
-
