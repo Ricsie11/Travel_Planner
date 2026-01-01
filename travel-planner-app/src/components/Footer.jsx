@@ -56,7 +56,7 @@ export default function Footer() {
 
       {/* Bottom */}
       <div className="border-t text-center dark:text-white transition py-4 text-black mx-auto w-1/2 text-sm">
-        © {new Date().getFullYear()} Atlas. All rights reserved.
+        © 2026 Atlas. All rights reserved.
       </div>
     </footer>
   );
