@@ -20,9 +20,10 @@ export default function App() {
             <Route path="/itinerary" element={<Itinerary />} />
           </Routes>
         </main>
-        <FloatingWhatsapp />
+
         <Footer />
       </div>
+      <FloatingWhatsapp />
     </Router>
   );
 }

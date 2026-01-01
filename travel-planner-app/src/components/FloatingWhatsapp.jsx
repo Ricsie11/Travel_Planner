@@ -5,10 +5,10 @@ function FloatingWhatsapp() {
     <div>
       <FloatingWhatsApp
         phoneNumber="+2347025293112"
-        accountName="Atlas"
-        avatar="http://i.pravatar.cc/300"
-        statusMessage="Reach out to us for any guide"
-        chatMessage="Hi there! How can we assist you today?"
+        accountName="Atlas Travel"
+        avatar="https://cdn-icons-png.flaticon.com/512/201/201623.png"
+        statusMessage="Your personal guide to unforgettable journeys"
+        chatMessage="Hi 👋 Welcome to Atlas Travel! How can we help you plan your next trip?"
         placeholder="Type your message here..."
         messageDelay={3}
         darkMode={false}
