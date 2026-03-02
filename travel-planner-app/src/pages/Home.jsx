@@ -102,14 +102,14 @@ export default function Home() {
           </p>
           <Link
             to="/destinations"
-            className="px-10 py-5 bg-text-primary text-bg-primary rounded-2xl font-bold hover:scale-105 transition-transform shadow-2xl border"
+            className="px-10 py-5 bg-text-primary text-white rounded-2xl font-bold hover:scale-105 transition-transform shadow-2xl border"
           >
             Start Exploring Now
           </Link>
           <div className="mt-8 flex gap-6 text-sm text-white/60 font-medium">
-            <span>Free forever</span>
+            <span>Free</span>
             <span>•</span>
-            <span>Curated with AI</span>
+            <span>Curated with Splendor</span>
             <span>•</span>
             <span>Travel anywhere</span>
           </div>
