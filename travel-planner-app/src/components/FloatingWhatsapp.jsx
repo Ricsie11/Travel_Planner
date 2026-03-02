@@ -4,7 +4,7 @@ function FloatingWhatsapp() {
   return (
     <div>
       <FloatingWhatsApp
-        phoneNumber="+2347025293112"
+        phoneNumber="07025293112"
         accountName="Atlas Travel"
         avatar="https://cdn-icons-png.flaticon.com/512/201/201623.png"
         statusMessage="Your personal guide to unforgettable journeys"

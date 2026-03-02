@@ -6,6 +6,7 @@ import Destinations from "./pages/Destinations";
 import DestinationDetails from "./pages/DestinationDetails";
 import Itinerary from "./pages/Itinerary";
 import FloatingWhatsapp from "./components/FloatingWhatsapp";
+import ScrollToTop from "./components/ScrollToTop";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 
 export default function App() {
@@ -25,6 +26,7 @@ export default function App() {
         <Footer />
       </div>
       <FloatingWhatsapp />
+      <ScrollToTop />
     </Router>
   );
 }

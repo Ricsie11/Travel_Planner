@@ -3,116 +3,382 @@
     "id": "paris",
     "city": "Paris",
     "country": "France",
-    "image": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34",
+    "image": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&q=80&w=1200",
     "temperature": "18°C",
-    "description": "The city of love and lights.",
-    "attractions": ["Eiffel Tower", "Louvre Museum", "Notre Dame"]
+    "description": "The city of love and lights, where every street corner feels like a masterpiece.",
+    "attractions": ["Eiffel Tower", "Louvre Museum", "Notre Dame"],
+    "hotels": [
+      {
+        "name": "Le Bristol Paris",
+        "price": "$1200",
+        "rating": 5.0,
+        "image": "https://images.unsplash.com/photo-1551882547-ff43c63faf76?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        "name": "Hôtel Ritz Paris",
+        "price": "$1500",
+        "rating": 4.9,
+        "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=400"
+      }
+    ],
+    "itinerary": [
+      { "day": 1, "activity": "Morning at Eiffel Tower, Afternoon at Louvre Museum." },
+      { "day": 2, "activity": "Walking tour of Montmartre and Sacré-Cœur." },
+      { "day": 3, "activity": "Seine River cruise and visit to Notre Dame." }
+    ]
   },
   {
     "id": "london",
     "city": "London",
     "country": "UK",
-    "image": "https://res.cloudinary.com/aenetworks/image/upload/c_fill,ar_2,w_3840,h_1920,g_auto/dpr_auto/f_auto/q_auto:eco/v1/topic-london-gettyimages-760251843-feature?_a=BAVAZGID0",
+    "image": "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&q=80&w=1200",
     "temperature": "15°C",
-    "description": "Historic city with modern charm.",
-    "attractions": ["Big Ben", "London Eye", "Buckingham Palace"]
+    "description": "A global metropolis where historic traditions meet cutting-edge innovation.",
+    "attractions": ["Big Ben", "London Eye", "Buckingham Palace"],
+    "hotels": [
+      {
+        "name": "The Savoy",
+        "price": "$800",
+        "rating": 4.9,
+        "image": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        "name": "Shangri-La The Shard",
+        "price": "$900",
+        "rating": 4.8,
+        "image": "data:image/jpeg;base64,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"
+      }
+    ],
+    "itinerary": [
+      { "day": 1, "activity": "Check out Big Ben and the Houses of Parliament." },
+      { "day": 2, "activity": "Visit the British Museum and Covent Garden." },
+      { "day": 3, "activity": "Walk through Hyde Park and visit Buckingham Palace." }
+    ]
   },
   {
     "id": "new-york",
     "city": "New York",
     "country": "USA",
-    "image": "https://nyc.eu/wp-content/uploads/2015/07/New_York_City-scaled.jpg",
+    "image": "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&q=80&w=1200",
     "temperature": "22°C",
-    "description": "The city that never sleeps.",
-    "attractions": ["Statue of Liberty", "Central Park", "Times Square"]
+    "description": "The epicenter of culture and commerce, pulsing with electric energy.",
+    "attractions": ["Statue of Liberty", "Central Park", "Times Square"],
+    "hotels": [
+      {
+        "name": "The Plaza Hotel",
+        "price": "$1000",
+        "rating": 5.0,
+        "image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        "name": "Mandarin Oriental",
+        "price": "$950",
+        "rating": 4.7,
+        "image": "https://images.unsplash.com/photo-1561501900-3701fa6a0f64?auto=format&fit=crop&q=80&w=400"
+      }
+    ],
+    "itinerary": [
+      { "day": 1, "activity": "Statue of Liberty and Financial District." },
+      { "day": 2, "activity": "Central Park and Museum of Modern Art." },
+      { "day": 3, "activity": "Empire State Building and Times Square at night." }
+    ]
   },
   {
     "id": "tokyo",
     "city": "Tokyo",
     "country": "Japan",
-    "image": "https://media.istockphoto.com/id/1188118008/photo/a-night-of-the-neon-street-at-the-downtown-in-shinjuku-tokyo-wide-shot.jpg?s=612x612&w=0&k=20&c=zE2AzmisWd4tRTnqdOxLUcP5SVZSrdkbc8lKOhJ5FvY=",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&q=80&w=1200",
     "temperature": "20°C",
-    "description": "Blend of tradition and futuristic vibes.",
-    "attractions": ["Shibuya Crossing", "Meiji Shrine", "Tokyo Tower"]
+    "description": "A mesmerizing fusion of ancient shrines and neon-lit skyscrapers.",
+    "attractions": ["Shibuya Crossing", "Meiji Shrine", "Tokyo Tower"],
+    "hotels": [
+      {
+        "name": "Aman Tokyo",
+        "price": "$1200",
+        "rating": 5.0,
+        "image": "https://images.unsplash.com/photo-1549294413-26f195200c16?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        "name": "Park Hyatt Tokyo",
+        "price": "$850",
+        "rating": 4.8,
+        "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&q=80&w=400"
+      }
+    ],
+    "itinerary": [
+      { "day": 1, "activity": "Explore Shibuya and Harajuku." },
+      { "day": 2, "activity": "Visit Meiji Shrine and Shinjuku Gyoen." },
+      { "day": 3, "activity": "Day trip to Tsukiji Outer Market and Akihabara." }
+    ]
   },
   {
     "id": "sydney",
     "city": "Sydney",
     "country": "Australia",
-    "image": "https://media.istockphoto.com/id/1256052948/photo/sydney-opera-house-close-up.jpg?s=612x612&w=0&k=20&c=whIj_OHD1xUfx9rgcLaKC2V_AjOJZb24IQOCcKrxaCM=",
+    "image": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&q=80&w=1200",
     "temperature": "25°C",
-    "description": "Famous for its stunning harbor and Opera House.",
-    "attractions": ["Sydney Opera House", "Bondi Beach", "Harbour Bridge"]
+    "description": "A sun-soaked coastal paradise with an iconic harbor and world-class beaches.",
+    "attractions": ["Sydney Opera House", "Bondi Beach", "Harbour Bridge"],
+    "hotels": [
+      {
+        "name": "Park Hyatt Sydney",
+        "price": "$1100",
+        "rating": 5.0,
+        "image": "https://images.unsplash.com/photo-1544124499-58912cbddada?auto=format&fit=crop&q=80&w=400"
+      }
+    ],
+    "itinerary": [
+      { "day": 1, "activity": "Sydney Opera House and Circular Quay." },
+      { "day": 2, "activity": "Bondi to Coogee coastal walk." },
+      { "day": 3, "activity": "Darling Harbour and Royal Botanic Garden." }
+    ]
   },
   {
     "id": "rome",
     "city": "Rome",
     "country": "Italy",
-    "image": "https://media.istockphoto.com/id/537714748/photo/navona-square-rome-italy.jpg?s=612x612&w=0&k=20&c=UVGkQA3R-OZsnDoF-KfxFJlzbBBPEiXLX3U6QrOwF4c=",
+    "image": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&q=80&w=1200",
     "temperature": "19°C",
-    "description": "Ancient city full of history and art.",
-    "attractions": ["Colosseum", "Vatican City", "Trevi Fountain"]
+    "description": "The Eternal City, where millennia of history live in every plaza.",
+    "attractions": ["Colosseum", "Vatican City", "Trevi Fountain"],
+    "hotels": [
+      {
+        "name": "Hotel de Russie",
+        "price": "$900",
+        "rating": 4.9,
+        "image": "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&q=80&w=400"
+      }
+    ],
+    "itinerary": [
+      { "day": 1, "activity": "Colosseum and Roman Forum." },
+      { "day": 2, "activity": "Vatican Museums and St. Peter's Basilica." },
+      { "day": 3, "activity": "Piazza Navona and Pantheon." }
+    ]
   },
   {
     "id": "dubai",
     "city": "Dubai",
     "country": "UAE",
-    "image": "https://momentaryawe.com/wp-content/uploads/2012/05/beautiful_dubai_4.jpg",
+    "image": "https://images.unsplash.com/photo-1647341922351-46907db7670e?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "temperature": "30°C",
-    "description": "Modern city with luxury and skyscrapers.",
-    "attractions": ["Burj Khalifa", "Dubai Mall", "Palm Jumeirah"]
+    "description": "A dazzling oasis of luxury, innovation, and record-breaking architecture.",
+    "attractions": ["Burj Khalifa", "Dubai Mall", "Palm Jumeirah"],
+    "hotels": [
+      {
+        "name": "Burj Al Arab",
+        "price": "$2000",
+        "rating": 5.0,
+        "image": "https://images.unsplash.com/photo-1692272399996-8c0a2e52623b?q=80&w=435&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+      {
+        "name": "Palm Jumeirah",
+        "price": "$1500",
+        "rating": 4.0,
+        "image": "https://images.unsplash.com/photo-1723539584928-1c49653a6f4b?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      }
+    ],
+    "itinerary": [
+      { "day": 1, "activity": "Visit Dubai Mall." },
+      { "day": 2, "activity": "Desert Safari and traditional dinner." },
+      { "day": 3, "activity": "Palm Jumeirah and Aquaventure Waterpark." }
+    ]
   },
   {
     "id": "cape-town",
     "city": "Cape Town",
     "country": "South Africa",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Cape_Town_City_%28cropped%29.jpg",
+    "image": "https://images.unsplash.com/photo-1576485290814-1c72aa4bbb8e?auto=format&fit=crop&q=80&w=1200",
     "temperature": "21°C",
-    "description": "Coastal city with breathtaking landscapes.",
-    "attractions": ["Table Mountain", "Robben Island", "V&A Waterfront"]
+    "description": "A breathtaking meeting point of mountains and sea at the edge of the continent.",
+    "attractions": ["Table Mountain", "Robben Island", "V&A Waterfront"],
+    "hotels": [
+      {
+        "name": "The Silo Hotel",
+        "price": "$1200",
+        "rating": 4.9,
+        "image": "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&q=80&w=400"
+      }
+    ],
+    "itinerary": [
+      { "day": 1, "activity": "Table Mountain by cable car." },
+      { "day": 2, "activity": "Robben Island tour." },
+      { "day": 3, "activity": "Cape Peninsula drive to Cape of Good Hope." }
+    ]
   },
   {
     "id": "abuja",
     "city": "Abuja",
     "country": "Nigeria",
-    "image": "https://t3.ftcdn.net/jpg/03/59/31/68/360_F_359316888_QL4VKw3ZLdZWeHGZaajVrt6jbWQG5NsM.jpg",
+    "image": "https://plus.unsplash.com/premium_photo-1733317260639-6fb8eb703c78?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D=copy",
     "temperature": "28°C",
-    "description": "Nigeria’s capital city with modern architecture and greenery.",
-    "attractions": ["Aso Rock", "Millennium Park", "National Mosque"]
+    "description": "A purpose-built capital defined by lush hills and modern architectural landmarks.",
+    "attractions": ["Aso Rock", "Millennium Park", "National Mosque"],
+    "hotels": [
+      {
+        "name": "Transcorp Hilton",
+        "price": "$300",
+        "rating": 4.7,
+        "image": "https://images.unsplash.com/photo-1582719478250-c89cae4df85b?auto=format&fit=crop&q=80&w=400"
+      }
+    ],
+    "itinerary": [
+      { "day": 1, "activity": "Aso Rock viewpoints and Millennium Park." },
+      { "day": 2, "activity": "National Mosque and local markets." },
+      { "day": 3, "activity": "Zuma Rock day trip." }
+    ]
   },
   {
     "id": "lagos",
     "city": "Lagos",
     "country": "Nigeria",
-    "image": "https://images.unsplash.com/photo-1707008797390-38f13ea40163?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGxhZ29zJTIwbmlnZXJpYXxlbnwwfHwwfHx8MA%3D%3D",
+    "image": "https://images.unsplash.com/photo-1533467634860-93099955e884?auto=format&fit=crop&q=80&w=1200",
     "temperature": "32°C",
-    "description": "Bustling coastal city known for culture, nightlife, and beaches.",
-    "attractions": [
-      "Lekki Conservation Centre",
-      "Nike Art Gallery",
-      "Tarkwa Bay Beach"
+    "description": "Africa's vibrant pulse—an energetic hub of commerce, arts, and coastal beauty.",
+    "attractions": ["Lekki Conservation Centre", "Nike Art Gallery", "Tarkwa Bay Beach"],
+    "hotels": [
+      {
+        "name": "The Wheatbaker",
+        "price": "$400",
+        "rating": 4.8,
+        "image": "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&q=80&w=400"
+      }
+    ],
+    "itinerary": [
+      { "day": 1, "activity": "Lekki Conservation Centre canopy walk." },
+      { "day": 2, "activity": "Nike Art Gallery and Victoria Island." },
+      { "day": 3, "activity": "Tarkwa Bay Beach boat trip." }
     ]
   },
   {
     "id": "marrakech",
     "city": "Marrakech",
     "country": "Morocco",
-    "image": "https://www.muchbetteradventures.com/magazine/content/images/size/w2000/2023/01/marrakech.jpg",
+    "image": "https://png.pngtree.com/thumb_back/fh260/background/20240705/pngtree-view-of-marrakech-morocco-image_15860171.jpg",
     "temperature": "27°C",
-    "description": "Vibrant city famous for markets, gardens, and culture.",
-    "attractions": ["Jemaa el-Fnaa", "Majorelle Garden", "Koutoubia Mosque"]
+    "description": "Scented with spices and colored in terracotta, a sensory journey through time.",
+    "attractions": ["Jemaa el-Fnaa", "Majorelle Garden", "Koutoubia Mosque"],
+    "hotels": [
+      {
+        "name": "La Mamounia",
+        "price": "$1500",
+        "rating": 5.0,
+        "image": "https://images.unsplash.com/photo-1578683010236-d716f9759678?auto=format&fit=crop&q=80&w=400"
+      }
+    ],
+    "itinerary": [
+      { "day": 1, "activity": "Explore the souks and Jemaa el-Fnaa." },
+      { "day": 2, "activity": "Majorelle Garden and Yves Saint Laurent Museum." },
+      { "day": 3, "activity": "Visit Bahia Palace and Saadian Tombs." }
+    ]
+  },
+  {
+    "id": "nairobi",
+    "city": "Nairobi",
+    "country": "Kenya",
+    "image": "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&q=80&w=1200",
+    "temperature": "24°C",
+    "description": "The 'Green City in the Sun', where wildlife safaris begin right at the city's edge.",
+    "attractions": ["Nairobi National Park", "Giraffe Centre", "Karen Blixen Museum"],
+    "hotels": [
+      {
+        "name": "Villa Rosa Kempinski",
+        "price": "$350",
+        "rating": 4.9,
+        "image": "https://images.unsplash.com/photo-1543967354-334159067b00?auto=format&fit=crop&q=80&w=400"
+      }
+    ],
+    "itinerary": [
+      { "day": 1, "activity": "Sunrise safari at Nairobi National Park." },
+      { "day": 2, "activity": "Feeding giraffes at the Giraffe Centre." },
+      { "day": 3, "activity": "Exploring the Karen Blixen Museum and local crafts." }
+    ]
+  },
+  {
+    "id": "zanzibar",
+    "city": "Zanzibar",
+    "country": "Tanzania",
+    "image": "https://images.unsplash.com/photo-1586861633534-2e90e722c366?auto=format&fit=crop&q=80&w=1200",
+    "temperature": "29°C",
+    "description": "An exotic archipelago of white sands, turquoise waters, and ancient Stone Town.",
+    "attractions": ["Stone Town", "Nungwi Beach", "Prison Island"],
+    "hotels": [
+      {
+        "name": "Zuri Zanzibar",
+        "price": "$600",
+        "rating": 5.0,
+        "image": "https://images.unsplash.com/photo-1590523278191-995ccd138e91?auto=format&fit=crop&q=80&w=400"
+      }
+    ],
+    "itinerary": [
+      { "day": 1, "activity": "Walking tour of historic Stone Town." },
+      { "day": 2, "activity": "Relaxing on the pristine sands of Nungwi." },
+      { "day": 3, "activity": "Spice plantation tour and sunset dhow cruise." }
+    ]
+  },
+  {
+    "id": "santorini",
+    "city": "Santorini",
+    "country": "Greece",
+    "image": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&q=80&w=1200",
+    "temperature": "26°C",
+    "description": "A volcanic masterpiece of whitewashed villages perched above the deep blue Aegean.",
+    "attractions": ["Oia Sunset", "Fira Cliffs", "Red Beach"],
+    "hotels": [
+      {
+        "name": "Canaves Oia",
+        "price": "$1100",
+        "rating": 4.9,
+        "image": "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&q=80&w=400"
+      }
+    ],
+    "itinerary": [
+      { "day": 1, "activity": "Watching the legendary sunset in Oia." },
+      { "day": 2, "activity": "Hiking from Fira to Oia along the caldera." },
+      { "day": 3, "activity": "Boat trip to the volcanic islands and hot springs." }
+    ]
+  },
+  {
+    "id": "bali",
+    "city": "Bali",
+    "country": "Indonesia",
+    "image": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=1200",
+    "temperature": "28°C",
+    "description": "The Island of the Gods, a tropical sanctuary of lush jungles and spiritual serenity.",
+    "attractions": ["Ubud Monkey Forest", "Uluwatu Temple", "Tegalalang Rice Terrace"],
+    "hotels": [
+      {
+        "name": "Viceroy Bali",
+        "price": "$750",
+        "rating": 4.9,
+        "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&q=80&w=400"
+      }
+    ],
+    "itinerary": [
+      { "day": 1, "activity": "Exploring the cultural heart of Ubud." },
+      { "day": 2, "activity": "Sunrise at Tegalalang Rice Terraces." },
+      { "day": 3, "activity": "Sunset traditional dance at Uluwatu Temple." }
+    ]
   },
   {
     "id": "cairo",
     "city": "Cairo",
     "country": "Egypt",
-    "image": "https://images.adsttc.com/media/images/64a2/cdae/cb9c/464f/a63a/9764/newsletter/cairo-architecture-city-guide-exploring-the-unique-architectural-blend-of-historical-and-contemporary-in-egypts-bustling-capital_23.jpg?1688391095",
+    "image": "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?auto=format&fit=crop&q=80&w=1200",
     "temperature": "29°C",
-    "description": "Historic city near the Great Pyramids.",
-    "attractions": [
-      "Pyramids of Giza",
-      "Egyptian Museum",
-      "Khan el-Khalili Bazaar"
+    "description": "A historic gateway to the ancient wonders of the Pharaohs.",
+    "attractions": ["Pyramids of Giza", "Egyptian Museum", "Khan el-Khalili Bazaar"],
+    "hotels": [
+      {
+        "name": "Marriott Mena House",
+        "price": "$600",
+        "rating": 4.9,
+        "image": "https://images.unsplash.com/photo-1549294413-26f195200c16?auto=format&fit=crop&q=80&w=400"
+      }
+    ],
+    "itinerary": [
+      { "day": 1, "activity": "Pyramids of Giza and Sphinx." },
+      { "day": 2, "activity": "Egyptian Museum and Saladin Citadel." },
+      { "day": 3, "activity": "Khan el-Khalili Bazaar shopping." }
     ]
   }
 ]
